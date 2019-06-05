@@ -20,5 +20,5 @@ df <- dt_data %>%
 
 ## Animation
 source("soccerAnimate.R")
-soccerAnimate(df, "sequence_1001")  #sequence nama from Stats dataset
+soccerAnimate(df, "sequence_1001", method="voronoi")  #sequence name from Stats dataset (train)
 anim_save("output.gif") 
