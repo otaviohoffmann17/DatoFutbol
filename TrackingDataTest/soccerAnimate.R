@@ -1,5 +1,6 @@
-soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2b8cbe", team2_color= "#dd3497", 
-                          convexhull=T, provider="stats"){
+soccerAnimate <- function(data, sequence, pitch_color="#78c679", 
+                          team1_color="#2b8cbe", team2_color= "#dd3497", 
+                          method=c("clean", "convexhull", "voronoi"), provider="stats"){ 
     require(dplyr)
     require(tidyr)
     require(stringr)
@@ -7,6 +8,7 @@ soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2
     require(ggsoccer)
     require(ggplot2)
     require(gganimate)
+    require(ggforce)
     require(gifski)
     require(transformr)
         
@@ -46,6 +48,7 @@ soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2
         wtt <- soccerTransform(wt, xMin=-52.5, xMax=52.5, yMin=-34, yMax=34, 
                                method="manual", lengthPitch = 120, widthPitch = 80)
         
+        
         # reshaping ball info
         btx <- gather(w, key, value, -1, -idx1, -idx2, -idy1, -idy2, -47, -48) %>%
                 select("sequ", "sample", key, value)
@@ -61,10 +64,15 @@ soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2
                                method="manual", lengthPitch = 120, widthPitch = 80)
         
         btt$key <- "ball"
+        
+        pos_data <- wtt %>% bind_rows(btt) %>%
+                    mutate(team_name=substr(key, 1, 3), type="pos") #%>%
+                    #filter(sample<10)
     }
     
+    
     ## Viz + Animation
-    if (convexhull){
+    if (method=="convexhull"){
             
         hull_data <- wtt %>%
                 filter(key!="def1" & key!="att1") %>%  #sin arqueros
@@ -73,15 +81,12 @@ soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2
                 slice(chull(x, y)) %>%
                 mutate(type="chull") 
         
-        pos_data <- wtt %>% bind_rows(btt) %>%
-                mutate(team_name=substr(key, 1, 3), type="pos")
-        
         anim <- ggplot() +
                 annotate_pitch(colour = "white",
                                fill   = pitch_color,
                                dimensions = pitch_statsbomb) +
                 theme_pitch() +
-                geom_polygon(data=hull_data, aes(x=x, y=y, fill=factor(team_name)), alpha=0.3) +      
+                geom_polygon(data=hull_data, aes(x=x, y=y, fill=factor(team_name)), alpha=0.3) +
                 geom_point(data=pos_data, aes(x=x, y=y, fill=factor(team_name), 
                                               size=factor(team_name)), 
                            col="black", 
@@ -102,10 +107,39 @@ soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2
         print(a)
     }
     
-    if (!convexhull){
+    if (method=="voronoi"){
+             
+            vor_data <- wtt %>%
+                        mutate(team_name=substr(key, 1, 3), type="voronoi")
             
-        pos_data <- wtt %>% bind_rows(btt) %>%
-            mutate(team_name=substr(key, 1, 3), type="pos")
+            anim <- ggplot() +
+                    annotate_pitch(colour = "white",
+                                   fill   = pitch_color,
+                                   dimensions = pitch_statsbomb) +
+                    theme_pitch() +
+                    geom_voronoi_tile(data=vor_data, aes(x=x, y=y, fill=team_name, group = -1L), 
+                                      colour = 'black', alpha=0.3, bound=c(0, 120, 0, 80)) + # statsbomb pitch dimensions
+                    geom_point(data=pos_data, aes(x=x, y=y, fill=factor(team_name), 
+                                                  size=factor(team_name)), 
+                               col="black", 
+                               shape=21) +
+                    transition_time(sample) +
+                    theme(plot.background = element_rect(fill = pitch_color),
+                          title = element_text(colour = "white"),
+                          legend.position = "none") +
+                    scale_size_manual(values=c(5,3,5)) +
+                    scale_fill_manual(values=c(team1_color, "yellow", team2_color), 
+                                      aesthetics = "fill") +
+                    ggtitle(label=paste("Stats insights dataset - ", sequence, "/ @DatoFutbol_cl")) 
+            
+            a <- animate(anim,
+                         width = 1024, height = 768,
+                         nframes=nrow(btt), fps = 10)
+            
+            print(a)
+    }
+    
+    if (method=="clean"){
             
         anim <- ggplot() +
             annotate_pitch(colour = "white",
@@ -123,7 +157,7 @@ soccerAnimate <- function(data, sequence, pitch_color="#78c679", team1_color="#2
             scale_size_manual(values=c(5,3,5)) +
             scale_fill_manual(values=c(team1_color, "yellow", team2_color), 
                               aesthetics = "fill") +
-            ggtitle(label=paste("Stats insights dataset - ", sequence, "/ @DatoFutbol_cl"))
+            ggtitle(label=paste("Stats insights dataset - ", sequence, "/ @DatoFutbol_cl")) 
             
         a <- animate(anim,
                      width = 1024, height = 768,
