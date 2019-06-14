@@ -9,6 +9,7 @@ Here you can find the databases and respective processing codes related to some 
 There are another resources as part of this project:
 
 * https://bustami.github.io/satRdaySCL2018-soccer-analytics-R/index.html
+* http://datofutbol.cl/revolucion-datos-soccer-analytics-seminario-UAI-2019/
 
 Articles (Medium):
 
