@@ -18,6 +18,7 @@ Articles (Medium):
 
 * https://medium.com/datos-y-ciencia/una-mirada-al-soccer-analytics-usando-r-parte-i-ab6b704b4c7f
 * https://medium.com/datos-y-ciencia/una-mirada-al-soccer-analytics-usando-r-parte-ii-5aadb0ff6ab2
+* https://medium.com/@ismaelgomezs/una-mirada-al-soccer-analytics-usando-r-parte-iii-3bdff9cd3752
 
 Please feel free to do comments and give feedback.
 Enjoy it!
