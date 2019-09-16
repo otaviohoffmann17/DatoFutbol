@@ -25,11 +25,6 @@ Enjoy it!
 
 
 
-```{r global_options, include=FALSE}
-library(knitr)
-knitr::opts_chunk$set(echo=F, warning=FALSE, message=FALSE)
-```
-
 **DATO FUTBOL** is a personal project that started in 2017 and it is focus on get a deeper knowledge in the field of Soccer (Football) Analytics. This way i've been developing different resources related, like this blog, which was created using [RStudio](https://www.rstudio.com), the package [blogdown](https://github.com/rstudio/blogdown) and deploying [Shiny](http://shiny.rstudio.com) apps for some posts.
 
 ##### Another resources here:
@@ -61,10 +56,7 @@ Generally, to choose topics for writing depends on available data. So, i propose
 *Champions ranking
 <br/ >
 <br/ >
-```{r c1, out.width = "500px"}
-include_graphics("campeones.png")
-#![](campeones.png)
-```
+![](campeones.png)
 <br/ >
 
 
