@@ -26,14 +26,14 @@
 
 Generally, to choose topics for writing depends on available data. So, i propose 3 data categories: A) Historical data, B) Event data & C) Tracking data. Here some examples:
 
-##### 1) Historical data
+#### 1) Historical data
 
 *Champions ranking
 
 ![](campeones.png)
 
 
-##### 2) Event data
+#### 2) Event data
 
 *Shotmap
 
@@ -46,7 +46,7 @@ Generally, to choose topics for writing depends on available data. So, i propose
 ![](events4B.png)
 
 
-##### 3) Tracking data
+#### 3) Tracking data
 
 Animation with Voronoi diagrams ([code in Github](https://github.com/Bustami/DatoFutbol/tree/master/TrackingDataTest)):
 
