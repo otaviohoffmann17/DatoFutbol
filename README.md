@@ -1,5 +1,3 @@
-The official repository of #Dato Fútbol.
-
 **DATO FUTBOL** is a personal project that started in 2017 and it is focus on get a deeper knowledge in the field of Soccer (Football) Analytics. This way i've been developing different resources related, like this blog, which was created using [RStudio](https://www.rstudio.com), the package [blogdown](https://github.com/rstudio/blogdown) and deploying [Shiny](http://shiny.rstudio.com) apps for some posts.
 
 ##### Another resources here:
@@ -31,16 +29,19 @@ Generally, to choose topics for writing depends on available data. So, i propose
 ##### 1) Historical data
 
 *Champions ranking
+
 ![](campeones.png)
 
 
 ##### 2) Event data
 
 *Shotmap
+
 ![](events1B.png)
 
 
 *Passing Networks
+
 ![](events3B.png)
 ![](events4B.png)
 
@@ -48,10 +49,10 @@ Generally, to choose topics for writing depends on available data. So, i propose
 ##### 3) Tracking data
 
 Animation with Voronoi diagrams ([code in Github](https://github.com/Bustami/DatoFutbol/tree/master/TrackingDataTest)):
+
 ![](1001_goal.gif)
 
 If you have any request don't hesitate to contact me by email:
 ##### ismaelgomezs@gmail.com
 
 Enjoy it!
-
