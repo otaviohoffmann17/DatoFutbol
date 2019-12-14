@@ -1,22 +1,22 @@
-**DATO FUTBOL** is a personal project that started in 2017 and it is focus on get a deeper knowledge in the field of Soccer (Football) Analytics. This way i've been developing different resources related, like the [Blog](http://datofutbol.cl), which was created using [RStudio](https://www.rstudio.com), the package [blogdown](https://github.com/rstudio/blogdown) and deploying <a href="http://shiny.rstudio.com" target="_blank">**Shiny**</a> apps for some posts.
+**DATO FUTBOL** is a personal project that started in 2017 and it is focus on get a deeper knowledge in the field of Soccer (Football) Analytics. This way i've been developing different resources related, like the [**Blog**](http://datofutbol.cl), which was created using [**RStudio**](https://www.rstudio.com), the package [**blogdown**](https://github.com/rstudio/blogdown) and deploying [**Shiny**](http://shiny.rstudio.com) apps for some posts.
 
 ##### Another resources here:
 
-* A [Twitter](https://twitter.com/DatoFutbol_cl) account.
+* A [**Twitter**](https://twitter.com/DatoFutbol_cl) account.
 
 * Conferences :
 
-1) [Una mirada al Soccer Analytics usando R](http://datofutbol.cl/satRdaySCL2018-soccer-analytics-R/index.html)
+1) [**Una mirada al Soccer Analytics usando R**](http://datofutbol.cl/satRdaySCL2018-soccer-analytics-R/index.html)
 
-2) [La revolución de los datos en Soccer Analytics](http://datofutbol.cl/revolucion-datos-soccer-analytics-seminario-UAI-2019/)
+2) [**La revolución de los datos en Soccer Analytics**](http://datofutbol.cl/revolucion-datos-soccer-analytics-seminario-UAI-2019/)
 
 * Another articles about using R for Soccer Analytics (Medium):
 
-[Parte I](https://medium.com/datos-y-ciencia/una-mirada-al-soccer-analytics-usando-r-parte-i-ab6b704b4c7f)
+[**Part I**](https://medium.com/datos-y-ciencia/una-mirada-al-soccer-analytics-usando-r-parte-i-ab6b704b4c7f)
 
-[Parte II](https://medium.com/datos-y-ciencia/una-mirada-al-soccer-analytics-usando-r-parte-ii-5aadb0ff6ab2)
+[**Part II**](https://medium.com/datos-y-ciencia/una-mirada-al-soccer-analytics-usando-r-parte-ii-5aadb0ff6ab2)
 
-[Parte III](https://medium.com/@ismaelgomezs/una-mirada-al-soccer-analytics-usando-r-parte-iii-3bdff9cd3752)
+[**Part III**](https://medium.com/@ismaelgomezs/una-mirada-al-soccer-analytics-usando-r-parte-iii-3bdff9cd3752)
 
 ## Examples
 
