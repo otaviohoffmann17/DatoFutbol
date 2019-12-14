@@ -26,7 +26,7 @@ Generally, to choose topics for writing depends on available data. So, i propose
 
 *Champions ranking
 
-![](campeones.png)
+![](animation_datofutbol.mp4)
 
 
 #### 2) Event data
