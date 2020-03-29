@@ -1,5 +1,7 @@
 Codes and some explanation about process done for this animation (https://twitter.com/DatoFutbol_cl/status/1131582677558136832).
 
+![](1001_goal.gif)
+
 [Sadly i can't share this used STATS data, but if you are interested about data structure i could give you some details about: ismaelgomezs@gmail.com]
 
 Processing:
