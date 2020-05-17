@@ -1,3 +1,9 @@
+## Last Update (17-05-2020):
+This is the new repository of this project:
+https://github.com/Dato-Futbol
+
+---
+
 **DATO FUTBOL** is a personal project that started in 2017 and it is focus on get a deeper knowledge in the field of Football Analytics. 
 
 I've been developing different resources related, like the [**Blog**](http://datofutbol.cl), which was created using [**RStudio**](https://www.rstudio.com) with the package [**blogdown**](https://github.com/rstudio/blogdown), and deploying [**Shiny**](http://shiny.rstudio.com) apps for some posts.
